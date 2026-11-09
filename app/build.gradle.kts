@@ -7,6 +7,16 @@ android {
     namespace = "com.example.ashreinudpad"
     compileSdk = 35
 
+    // Keep Java and Kotlin bytecode targets aligned for GitHub Actions.
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         applicationId = "com.example.ashreinudpad"
         minSdk = 23
